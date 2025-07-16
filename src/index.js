@@ -45,7 +45,9 @@ client.on("message_create", async (msg) => {
                 message.includes("здравствуйте,меня зовут") ||
                 message.includes("здравствуйте👋") ||
                 message.includes("салем👋") ||
-                message.includes("👋")
+                message.includes("👋") ||
+                message.includes("салем 👋🏻") ||
+                message.includes("салем👋🏻")
             ) {
                 await User.findOneAndUpdate(
                     { phone: chatId },
