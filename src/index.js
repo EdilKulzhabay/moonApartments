@@ -32,6 +32,8 @@ client.on("message_create", async (msg) => {
     if (msg.fromMe) {
         const chatId = msg.to;
         console.log("Исходящее сообщение от бота:", msg.body);
+
+        👋👋🏻👋🏼👋🏽👋🏾👋🏿
         
         try {
             const message = msg.body.toLowerCase().trim();
@@ -45,9 +47,14 @@ client.on("message_create", async (msg) => {
                 message.includes("здравствуйте,меня зовут") ||
                 message.includes("здравствуйте👋") ||
                 message.includes("салем👋") ||
+                message.includes("салем 👋") ||
                 message.includes("👋") ||
                 message.includes("салем 👋🏻") ||
-                message.includes("салем👋🏻")
+                message.includes("салем👋🏻") ||
+                message.includes("👋🏼") ||
+                message.includes("👋🏽") ||
+                message.includes("👋🏾") ||
+                message.includes("👋🏿")
             ) {
                 await User.findOneAndUpdate(
                     { phone: chatId },
