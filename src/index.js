@@ -33,8 +33,6 @@ client.on("message_create", async (msg) => {
         const chatId = msg.to;
         console.log("Исходящее сообщение от бота:", msg.body);
 
-        👋👋🏻👋🏼👋🏽👋🏾👋🏿
-        
         try {
             const message = msg.body.toLowerCase().trim();
             if (
